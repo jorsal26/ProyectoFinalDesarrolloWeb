@@ -1,0 +1,18 @@
+{
+  "name": "proyectofinal_e3",
+  "version": "1.0.0",
+  "description": "<h1 align=\"center\">Hola 👋, Soy Jorge Luis Salinas</h1>\r <h3 align=\"center\">Viejo programador en diferentes lenguajes, intentando actualizarme en nuevas tecnologias</h3>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^9.0.0",
+    "nodemon": "^3.1.0"
+  },
+  "dependencies": {
+    "sass": "^1.71.1"
+  }
+}
