@@ -1,4 +1,4 @@
-<h1 align="center">Hola 👋, Soy Jorge Luis Salinas</h1>
+<h1 align="center">Hola 👋, Soy Jorge Luis Salinas.</h1>
 <h3 align="center">Viejo programador en diferentes lenguajes, intentando actualizarme en nuevas tecnologias</h3>
 
 - 🔭 Actualmente trabajando en [Comisión49755\ProyectoFinal_E2](https://jorsal26.github.io/DesarrolloWebProyectoFinal_E3/)
