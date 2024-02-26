@@ -1,0 +1,29 @@
+/* Extensiones */
+// %icono_flotante{
+    
+// }
+%formatoh1 {
+    background: radial-gradient(circle, nth($Colores,12) 0%, nth($Colores,13) 100%);
+    /* Declaro la fuente que quiero utilizar */
+    font-family: 'roboto-titulos', sans-serif;
+    /* Podemos tambien escribir los cuatros lados con sus valores indivuales en la propiedad general */
+    padding: 10px 40px 10px 0;
+    /* size (tamaño) style (estilo) color */
+    border: 2px solid black;
+    /* border-bottom: 2px dotted blue;
+    border-top: 1px solid black; */
+    /* redondear las esquinas de la caja */
+    border-radius: 10px;
+
+    /* Centrar un elemento (algunos) */
+    text-align: center; 
+}
+
+%formatoh2 {
+    /* Declaro la fuente que quiero utilizar */
+    font-family: 'roboto-subtitulos', sans-serif;
+     /* Podemos tambien escribir los cuatros lados con sus valores indivuales en la propiedad general */
+    padding: 10px 10px 10px 10px;
+     /* Centrar un elemento (algunos) */
+    text-align: center; 
+}

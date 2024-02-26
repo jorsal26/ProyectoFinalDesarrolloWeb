@@ -1,8 +1,375 @@
-/* Parcials */
+/* Partials */
+@import 'base/mixins';
+@import 'base/listas';
 @import 'base/variables';
+@import 'base/mapas';
+@import 'base/extends';
 @import 'components/header';
 @import 'components/footer';
 @import 'components/nosotros';
 @import 'components/contacto';
 @import 'components/productos';
 @import 'components/testimonios';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box !important
+
+}
+
+.menunav{
+    /* Declaro la fuente que quiero utilizar */
+    font-family: 'roboto-menunav', sans-serif;
+    font-size: 20px;
+    text-align: right;
+}
+
+em, strong{
+    background-color: bisque;
+}
+
+/* Pseudoclase */
+.enlace:hover{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.menunav:hover{
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 10px;
+    color: nth($Colores,2);
+    background: $bg-color-menunav; 
+}
+
+/* Pseudoelemento */
+p::first-letter{
+    text-transform: uppercase;
+}
+
+h1 {
+    @extend %formatoh1; 
+}
+
+h2 {
+    @extend %formatoh2; 
+}
+
+.icono{
+    width: 200px;
+    height: 100px;
+    display: inline-block;
+    width: auto;
+    vertical-align: middle;
+}
+
+.titulo {
+    grid-area: titulo;
+}
+
+.cabecera {
+    grid-area: cabecera;
+    background: linear-gradient(to right, #1e5799 0%,#2ce0bf 19%,#76dd2c 40%,#dba62b 60%,#e02cbf 83%,#1e5799 100%); 
+    background-size: $bgWidth 100%;
+    animation: bg 15s linear infinite;
+}
+@keyframes bg{
+    0%{
+        background-position-x: 0;
+    }
+    100%{
+        background-position-x: $bgWidth;
+    }
+}
+
+/* Mobile */
+@media only screen and (max-width: 480px){
+    /* Aca dentro escribimos css comun */
+    body{
+        background-color: nth($ColoresMobile,3);
+    }
+
+    h1{
+        font-size: 22px;
+    }
+    
+    .grilla{
+        // display: grid;
+        // grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 90px;
+        // grid-template-columns: 1fr;
+        @include grid(9, 4, 1em);
+
+        grid-template-areas:
+        'cabecera'
+        'titulo'
+        'inicioproductos'
+        'miraproductosinicio'
+        'nosotros'
+        'ubicacion'
+        'local'
+        'contacto'
+        'pie';
+    
+        // gap: 5px;
+        // height: 50vh;
+    }
+    .grilla-testimonios{
+        // display: grid;
+        // grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 90px;
+        // grid-template-columns: 1fr;
+        @include grid(8, 4, 1em);
+
+        grid-template-areas:
+        'cabecera'
+        'titulo'
+        'miraproductosinicio'
+        'opiniones'
+        'productos'
+        'local'
+        'contacto'
+        'pie';
+    
+        // gap: 5px;
+        // height: 50vh;
+    }
+    .grilla-productos{
+        // display: grid;
+        // grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 90px;
+        // grid-template-columns: 1fr;
+        @include grid(7, 4, 1em);
+
+        grid-template-areas:
+        'cabecera'
+        'titulo'
+        'miraproductosinicio'
+        'productos'
+        'local'
+        'contacto'
+        'pie';
+    
+        // gap: 5px;
+        // height: 50vh;
+    }
+    .grilla-nosotros{
+        // display: grid;
+        // grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 90px;
+        // grid-template-columns: 1fr;
+        @include grid(8, 4, 1em);
+
+        grid-template-areas:
+        'cabecera'
+        'titulo'
+        'miraproductosinicio'
+        'nosotros'
+        'ubicacion'
+        'local'
+        'contacto'
+        'pie';
+    
+        gap: 5px;
+        height: 50vh;
+    }
+    .grilla-contactos{
+        // display: grid;
+        // grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 90px;
+        // grid-template-columns: 1fr;
+        @include grid(7, 4, 1em);
+
+        grid-template-areas:
+        'cabecera'
+        'titulo'
+        'miraproductosinicio'
+        'formcontacto'
+        'local'
+        'contacto'
+        'pie';
+    
+        // gap: 5px;
+        // height: 50vh;
+    }
+}
+
+/* Tablet */
+@media only screen and (min-width: 481px) and (max-width: 980px){
+    /* Aca dentro escribimos css comun */
+    body{
+        background-color: nth($ColoresTablet,3);
+    }
+    .grilla{
+        // display: grid;
+        // grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 90px;
+        // grid-template-columns: 1fr 1fr 1fr 1fr;
+        @include grid(7, 4, 1em);
+
+        grid-template-areas:
+        'cabecera cabecera cabecera cabecera'
+        'titulo titulo titulo titulo'
+        'inicioproductos inicioproductos inicioproductos inicioproductos'
+        'miraproductosinicio miraproductosinicio miraproductosinicio miraproductosinicio'
+        'nosotros nosotros nosotros nosotros'
+        'ubicacion ubicacion local contacto'
+        'pie pie pie pie';
+    
+        // gap: 5px;
+        // height: 50vh;
+    }
+    .grilla-testimonios{
+        // display: grid;
+        // grid-template-rows: 1fr 1fr 1fr 1fr 1fr 90px;
+        // grid-template-columns: 1fr 1fr 1fr 1fr;
+        @include grid(6, 4, 1em);
+
+        grid-template-areas:
+        'cabecera cabecera cabecera cabecera'
+        'titulo titulo titulo titulo'
+        'opiniones opiniones opiniones opiniones'
+        'productos productos productos productos'
+        'local local contacto contacto'
+        'pie pie pie pie';
+    
+        // gap: 5px;
+        // height: 50vh;
+    }
+    .grilla-productos{
+        // display: grid;
+        // grid-template-rows: 1fr 1fr 1fr 1fr 90px;
+        // grid-template-columns: 1fr 1fr 1fr 1fr;
+        @include grid(5, 4, 1em);
+
+        grid-template-areas:
+        'cabecera cabecera cabecera cabecera'
+        'titulo titulo titulo titulo'
+        'productos productos productos productos'
+        'local local contacto contacto'
+        'pie pie pie pie';
+    
+        // gap: 5px;
+        // height: 50vh;
+    }
+    .grilla-nosotros{
+        // display: grid;
+        // grid-template-rows: 1fr 1fr 1fr 1fr 90px;
+        // grid-template-columns: 1fr 1fr 1fr 1fr;
+        @include grid(5, 4, 1em);
+
+        grid-template-areas:
+        'cabecera cabecera cabecera cabecera'
+        'titulo titulo titulo titulo'
+        'nosotros nosotros nosotros nosotros'
+        'ubicacion ubicacion local contacto'
+        'pie pie pie pie';
+    
+        // gap: 5px;
+        // height: 50vh;
+    }
+    .grilla-contactos{
+        // display: grid;
+        // grid-template-rows: 1fr 1fr 1fr 1fr 90px;
+        // grid-template-columns: 1fr 1fr 1fr 1fr;
+        @include grid(5, 4, 1em);
+
+        grid-template-areas:
+        'cabecera cabecera cabecera cabecera'
+        'titulo titulo titulo titulo'
+        'formcontacto formcontacto formcontacto formcontacto'
+        'local local contacto contacto'
+        'pie pie pie pie';
+    
+        // gap: 5px;
+        // height: 50vh;
+    }
+}
+
+/* Descktop */
+@media only screen and (min-width: 981px){
+    /* Aca dentro escribimos css comun */
+    body{
+        background-color: nth($ColoresDescktop,3);
+    }
+    .grilla{
+        // display: grid;
+        // grid-template-rows: 120px 1fr 1fr 1fr 1fr 1fr 90px;
+        // grid-template-columns: 1fr 1fr 1fr 1fr;
+        @include grid(7, 4, 1em);
+
+        grid-template-areas:
+        'cabecera cabecera cabecera cabecera'
+        'titulo titulo titulo titulo'
+        'inicioproductos inicioproductos inicioproductos inicioproductos'
+        'miraproductosinicio miraproductosinicio miraproductosinicio miraproductosinicio'
+        'nosotros nosotros nosotros nosotros'
+        'ubicacion ubicacion local contacto'
+        'pie pie pie pie';
+    
+        // gap: 5px;
+        // height: 50vh;
+    }
+    .grilla-testimonios{
+        // display: grid;
+        @include grid(6, 4, 1em);
+        // grid-template-rows: 120px 1fr 1fr 1fr 1fr 90px;
+        // grid-template-columns: 1fr 1fr 1fr 1fr;
+        // grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    
+
+        grid-template-areas:
+        'cabecera cabecera cabecera cabecera'
+        'titulo titulo titulo titulo'
+        'opiniones opiniones opiniones opiniones'
+        'productos productos productos productos'
+        'local local contacto contacto'
+        'pie pie pie pie';
+    
+        // gap: 5px;
+        //  height: 50vh;
+    }
+    .grilla-productos{
+        // display: grid;
+        // grid-template-rows: 120px 1fr 1fr 1fr 90px;
+        // grid-template-columns: 1fr 1fr 1fr 1fr;
+        @include grid(5, 4, 1em);
+
+        grid-template-areas:
+        'cabecera cabecera cabecera cabecera'
+        'titulo titulo titulo titulo'
+        'productos productos productos productos'
+        'local local contacto contacto'
+        'pie pie pie pie';
+    
+        // gap: 5px;
+        // height: 50vh;
+    }
+    .grilla-nosotros{
+        // display: grid;
+        // grid-template-rows: 120px 1fr 1fr 1fr 90px;
+        // grid-template-columns: 1fr 1fr 1fr 1fr;
+        @include grid(5, 4, 1em);
+
+        grid-template-areas:
+        'cabecera cabecera cabecera cabecera'
+        'titulo titulo titulo titulo'
+        'nosotros nosotros nosotros nosotros'
+        'ubicacion ubicacion local contacto'
+        'pie pie pie pie';
+    
+        // gap: 5px;
+        // height: 50vh;
+    }
+    .grilla-contactos{
+        // display: grid;
+        // grid-template-rows: 120px 1fr 1fr 90px;
+        // grid-template-columns: 1fr 1fr 1fr 1fr;
+        @include grid(4, 4, 1em);
+
+        grid-template-areas:
+        'cabecera cabecera cabecera cabecera'
+        'titulo titulo titulo titulo'
+        'formcontacto formcontacto local contacto'
+        'pie pie pie pie';
+    
+        // gap: 5px;
+        // height: 50vh;
+    }
+}

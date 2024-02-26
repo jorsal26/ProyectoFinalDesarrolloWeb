@@ -1,0 +1,12 @@
+/* Mixins */
+@mixin grid($row, $cols, $espacio){
+    display: grid;
+    grid-template-rows: repeat($row, 1fr);
+    grid-template-columns: repeat($cols, 1fr);
+    gap: $espacio;
+    @media only screen and (max-width: 480px){
+        gap: 0em;
+    }
+    height: 50vh;
+
+}

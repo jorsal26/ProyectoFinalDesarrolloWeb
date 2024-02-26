@@ -1,21 +1,16 @@
 /* Header */
-header{
-    background-color: $bg-color-general;
-    nav{
-        ul{
-            list-style-type: disc;
-            li{
-                a{
-                    text-decoration: underline;
-                    &:hover{
-                        text-decoration: overline;
-                    }
-                }
-            }
-        }
-    }
-
-    @media only screen and (max-width: 768px){
-        background-color: $bg-color-general;
-    }
-}
+// header {
+    // nav{
+    //     ul{
+    //         list-style-type: disc;
+    //         li{
+    //             a{
+    //                 // text-decoration: underline;
+    //                 &:hover{
+    //                     // text-decoration: overline;
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
+// }

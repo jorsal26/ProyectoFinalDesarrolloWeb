@@ -1,15 +1,54 @@
 /* Variables */
 /* Colores */
 $color-principal: white;
-$bg-color-general: black;
+$bg-color-menunav: linear-gradient(90deg, nth($Colores,9) 0%, lighten(nth($Colores,9), 25%) 35%, lighten(nth($Colores,9), 50%) 100%);
 $color-hover: gold;
+$bgWidth: 10000px;
 
 /*  Estructuras */
 $border-principal: 1px solid black;
 $redondeado: 10%;
 
 /* Fuentes */
-$font-titulos: 44px;
-$font-subtitulos: 30px;
-$font-parrafos: 20px;
+/* Fonts | Conectarme a los servidores de google donde ellos guardan estas fuentes y me la traigo a mi codigo de manera online */
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Poppins:wght@500&display=swap');
+
+/* Se utiliza una regla de CSS para poder integrar a tus estilos una fuente local */
+@font-face {
+    /* Es el nombre que le dan a la fuente personalizada */
+    font-family: roboto-parrafos;
+    /* La ruta del archivo de tu fuente | Hay dos valores, url y format, url donde está tu fuente y format el formato de la fuente para asegurar la compatibilidad */
+    src: url('fonts/roboto-fontfacekit/web-fonts/roboto_regular_macroman/Roboto-Regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    /* Es el nombre que le dan a la fuente personalizada */
+    font-family: roboto-titulos;
+    /* La ruta del archivo de tu fuente | Hay dos valores, url y format, url donde está tu fuente y format el formato de la fuente para asegurar la compatibilidad */
+    src: url('fonts/roboto-fontfacekit/web-fonts/roboto_bold_macroman/Roboto-Bold-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+}
+
+@font-face {
+    /* Es el nombre que le dan a la fuente personalizada */
+    font-family: roboto-subtitulos;
+    /* La ruta del archivo de tu fuente | Hay dos valores, url y format, url donde está tu fuente y format el formato de la fuente para asegurar la compatibilidad */
+    src: url('fonts/roboto-fontfacekit/web-fonts/roboto_light_macroman/Roboto-Light-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    /* Es el nombre que le dan a la fuente personalizada */
+    font-family: roboto-menunav;
+    /* La ruta del archivo de tu fuente | Hay dos valores, url y format, url donde está tu fuente y format el formato de la fuente para asegurar la compatibilidad */
+    src: url('fonts/roboto-fontfacekit/web-fonts/roboto_boldcondensed_macroman/RobotoCondensed-Bold-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+/* Fin definicion de fuentes */
 
