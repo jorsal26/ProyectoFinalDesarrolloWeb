@@ -26,7 +26,7 @@
 }
 
 em, strong{
-    background-color: bisque;
+    background-color: nth($Colores,14);
 }
 
 /* Pseudoclase */
@@ -88,7 +88,7 @@ h2 {
 @media only screen and (max-width: 480px){
     /* Aca dentro escribimos css comun */
     body{
-        background-color: nth($ColoresMobile,3);
+        background-color: map-get($colores-sitio , body-mobil );
     }
 
     h1{
@@ -96,9 +96,6 @@ h2 {
     }
     
     .grilla{
-        // display: grid;
-        // grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 90px;
-        // grid-template-columns: 1fr;
         @include grid(9, 4, 1em);
 
         grid-template-areas:
@@ -111,14 +108,8 @@ h2 {
         'local'
         'contacto'
         'pie';
-    
-        // gap: 5px;
-        // height: 50vh;
     }
     .grilla-testimonios{
-        // display: grid;
-        // grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 90px;
-        // grid-template-columns: 1fr;
         @include grid(8, 4, 1em);
 
         grid-template-areas:
@@ -130,14 +121,8 @@ h2 {
         'local'
         'contacto'
         'pie';
-    
-        // gap: 5px;
-        // height: 50vh;
     }
     .grilla-productos{
-        // display: grid;
-        // grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 90px;
-        // grid-template-columns: 1fr;
         @include grid(7, 4, 1em);
 
         grid-template-areas:
@@ -148,14 +133,8 @@ h2 {
         'local'
         'contacto'
         'pie';
-    
-        // gap: 5px;
-        // height: 50vh;
     }
     .grilla-nosotros{
-        // display: grid;
-        // grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 90px;
-        // grid-template-columns: 1fr;
         @include grid(8, 4, 1em);
 
         grid-template-areas:
@@ -167,14 +146,8 @@ h2 {
         'local'
         'contacto'
         'pie';
-    
-        gap: 5px;
-        height: 50vh;
     }
     .grilla-contactos{
-        // display: grid;
-        // grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 90px;
-        // grid-template-columns: 1fr;
         @include grid(7, 4, 1em);
 
         grid-template-areas:
@@ -185,9 +158,6 @@ h2 {
         'local'
         'contacto'
         'pie';
-    
-        // gap: 5px;
-        // height: 50vh;
     }
 }
 
@@ -195,12 +165,9 @@ h2 {
 @media only screen and (min-width: 481px) and (max-width: 980px){
     /* Aca dentro escribimos css comun */
     body{
-        background-color: nth($ColoresTablet,3);
+        background-color: map-get($colores-sitio , body-tablet );
     }
     .grilla{
-        // display: grid;
-        // grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 90px;
-        // grid-template-columns: 1fr 1fr 1fr 1fr;
         @include grid(7, 4, 1em);
 
         grid-template-areas:
@@ -211,14 +178,8 @@ h2 {
         'nosotros nosotros nosotros nosotros'
         'ubicacion ubicacion local contacto'
         'pie pie pie pie';
-    
-        // gap: 5px;
-        // height: 50vh;
     }
     .grilla-testimonios{
-        // display: grid;
-        // grid-template-rows: 1fr 1fr 1fr 1fr 1fr 90px;
-        // grid-template-columns: 1fr 1fr 1fr 1fr;
         @include grid(6, 4, 1em);
 
         grid-template-areas:
@@ -228,14 +189,8 @@ h2 {
         'productos productos productos productos'
         'local local contacto contacto'
         'pie pie pie pie';
-    
-        // gap: 5px;
-        // height: 50vh;
     }
     .grilla-productos{
-        // display: grid;
-        // grid-template-rows: 1fr 1fr 1fr 1fr 90px;
-        // grid-template-columns: 1fr 1fr 1fr 1fr;
         @include grid(5, 4, 1em);
 
         grid-template-areas:
@@ -244,14 +199,8 @@ h2 {
         'productos productos productos productos'
         'local local contacto contacto'
         'pie pie pie pie';
-    
-        // gap: 5px;
-        // height: 50vh;
     }
     .grilla-nosotros{
-        // display: grid;
-        // grid-template-rows: 1fr 1fr 1fr 1fr 90px;
-        // grid-template-columns: 1fr 1fr 1fr 1fr;
         @include grid(5, 4, 1em);
 
         grid-template-areas:
@@ -260,14 +209,8 @@ h2 {
         'nosotros nosotros nosotros nosotros'
         'ubicacion ubicacion local contacto'
         'pie pie pie pie';
-    
-        // gap: 5px;
-        // height: 50vh;
     }
     .grilla-contactos{
-        // display: grid;
-        // grid-template-rows: 1fr 1fr 1fr 1fr 90px;
-        // grid-template-columns: 1fr 1fr 1fr 1fr;
         @include grid(5, 4, 1em);
 
         grid-template-areas:
@@ -276,9 +219,6 @@ h2 {
         'formcontacto formcontacto formcontacto formcontacto'
         'local local contacto contacto'
         'pie pie pie pie';
-    
-        // gap: 5px;
-        // height: 50vh;
     }
 }
 
@@ -286,12 +226,9 @@ h2 {
 @media only screen and (min-width: 981px){
     /* Aca dentro escribimos css comun */
     body{
-        background-color: nth($ColoresDescktop,3);
+        background-color: map-get($colores-sitio , body-descktop );
     }
     .grilla{
-        // display: grid;
-        // grid-template-rows: 120px 1fr 1fr 1fr 1fr 1fr 90px;
-        // grid-template-columns: 1fr 1fr 1fr 1fr;
         @include grid(7, 4, 1em);
 
         grid-template-areas:
@@ -302,17 +239,9 @@ h2 {
         'nosotros nosotros nosotros nosotros'
         'ubicacion ubicacion local contacto'
         'pie pie pie pie';
-    
-        // gap: 5px;
-        // height: 50vh;
     }
     .grilla-testimonios{
-        // display: grid;
         @include grid(6, 4, 1em);
-        // grid-template-rows: 120px 1fr 1fr 1fr 1fr 90px;
-        // grid-template-columns: 1fr 1fr 1fr 1fr;
-        // grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-    
 
         grid-template-areas:
         'cabecera cabecera cabecera cabecera'
@@ -321,14 +250,8 @@ h2 {
         'productos productos productos productos'
         'local local contacto contacto'
         'pie pie pie pie';
-    
-        // gap: 5px;
-        //  height: 50vh;
     }
     .grilla-productos{
-        // display: grid;
-        // grid-template-rows: 120px 1fr 1fr 1fr 90px;
-        // grid-template-columns: 1fr 1fr 1fr 1fr;
         @include grid(5, 4, 1em);
 
         grid-template-areas:
@@ -337,14 +260,8 @@ h2 {
         'productos productos productos productos'
         'local local contacto contacto'
         'pie pie pie pie';
-    
-        // gap: 5px;
-        // height: 50vh;
     }
     .grilla-nosotros{
-        // display: grid;
-        // grid-template-rows: 120px 1fr 1fr 1fr 90px;
-        // grid-template-columns: 1fr 1fr 1fr 1fr;
         @include grid(5, 4, 1em);
 
         grid-template-areas:
@@ -353,14 +270,8 @@ h2 {
         'nosotros nosotros nosotros nosotros'
         'ubicacion ubicacion local contacto'
         'pie pie pie pie';
-    
-        // gap: 5px;
-        // height: 50vh;
     }
     .grilla-contactos{
-        // display: grid;
-        // grid-template-rows: 120px 1fr 1fr 90px;
-        // grid-template-columns: 1fr 1fr 1fr 1fr;
         @include grid(4, 4, 1em);
 
         grid-template-areas:
@@ -368,8 +279,5 @@ h2 {
         'titulo titulo titulo titulo'
         'formcontacto formcontacto local contacto'
         'pie pie pie pie';
-    
-        // gap: 5px;
-        // height: 50vh;
     }
 }

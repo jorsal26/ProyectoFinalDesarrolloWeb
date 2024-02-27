@@ -229,6 +229,10 @@ input[type=submit]:hover {
   padding: 5px;
 }
 
+.productos img:hover {
+  transform: scale(1.1);
+}
+
 /* Testimonios */
 .opiniones {
   grid-area: opiniones;
@@ -361,8 +365,6 @@ p::first-letter {
     gap: 1em;
     height: 50vh;
     grid-template-areas: "cabecera" "titulo" "miraproductosinicio" "nosotros" "ubicacion" "local" "contacto" "pie";
-    gap: 5px;
-    height: 50vh;
   }
 }
 @media only screen and (max-width: 480px) and (max-width: 480px) {

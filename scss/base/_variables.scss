@@ -1,12 +1,12 @@
 /* Variables */
 /* Colores */
-$color-principal: white;
+$color-principal: nth($Colores,2);
 $bg-color-menunav: linear-gradient(90deg, nth($Colores,9) 0%, lighten(nth($Colores,9), 25%) 35%, lighten(nth($Colores,9), 50%) 100%);
-$color-hover: gold;
+$color-hover: nth($Colores,7);
 $bgWidth: 10000px;
 
 /*  Estructuras */
-$border-principal: 1px solid black;
+$border-principal: 1px solid nth($Colores,1);
 $redondeado: 10%;
 
 /* Fuentes */

@@ -9,7 +9,7 @@
     /* Podemos tambien escribir los cuatros lados con sus valores indivuales en la propiedad general */
     padding: 10px 40px 10px 0;
     /* size (tamaño) style (estilo) color */
-    border: 2px solid black;
+    border: 2px solid nth($Colores,1);
     /* border-bottom: 2px dotted blue;
     border-top: 1px solid black; */
     /* redondear las esquinas de la caja */
