@@ -21,7 +21,7 @@
 .menunav{
     /* Declaro la fuente que quiero utilizar */
     font-family: 'roboto-menunav', sans-serif;
-    font-size: 20px;
+    font-size: 25px;
     text-align: right;
 }
 
@@ -36,7 +36,7 @@ em, strong{
 }
 
 .menunav:hover{
-    font-size: 18px;
+    font-size: 28px;
     font-weight: bold;
     text-decoration: none;
     border-radius: 10px;
@@ -71,25 +71,36 @@ h2 {
 
 .cabecera {
     grid-area: cabecera;
-    background: linear-gradient(to right, #1e5799 0%,#2ce0bf 19%,#76dd2c 40%,#dba62b 60%,#e02cbf 83%,#1e5799 100%); 
-    background-size: $bgWidth 100%;
-    animation: bg 15s linear infinite;
+    background-image: url(../multimedia/FondoLogoSup.svg);
+    position: relative;
+    height: 100;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 30px 30px 30px rgba(0,0,0, 0.75);
+
+    // background: linear-gradient(to right, #1e5799 0%,#2ce0bf 19%,#76dd2c 40%,#dba62b 60%,#e02cbf 83%,#1e5799 100%); 
+    // background-size: $bgWidth 100%;
+    // animation: bg 15s linear infinite;
 }
-@keyframes bg{
-    0%{
-        background-position-x: 0;
-    }
-    100%{
-        background-position-x: $bgWidth;
-    }
+// @keyframes bg{
+//     0%{
+//         background-position-x: 0;
+//     }
+//     100%{
+//         background-position-x: $bgWidth;
+//     }
+// }
+
+body{
+    background-image: url(../multimedia/bg3.jpg);
 }
 
-/* Mobile */
+    /* Mobile */
 @media only screen and (max-width: 480px){
     /* Aca dentro escribimos css comun */
-    body{
-        background-color: map-get($colores-sitio , body-mobil );
-    }
+    // body{
+    //     background-color: map-get($colores-sitio , body-mobil );
+    // }
 
     h1{
         font-size: 22px;
@@ -164,9 +175,9 @@ h2 {
 /* Tablet */
 @media only screen and (min-width: 481px) and (max-width: 980px){
     /* Aca dentro escribimos css comun */
-    body{
-        background-color: map-get($colores-sitio , body-tablet );
-    }
+    // body{
+    //     background-color: map-get($colores-sitio , body-tablet );
+    // }
     .grilla{
         @include grid(7, 4, 1em);
 
@@ -225,20 +236,20 @@ h2 {
 /* Descktop */
 @media only screen and (min-width: 981px){
     /* Aca dentro escribimos css comun */
-    body{
-        background-color: map-get($colores-sitio , body-descktop );
-    }
+    // body{
+    //     background-color: map-get($colores-sitio , body-descktop );
+    // }
     .grilla{
-        @include grid(7, 4, 1em);
+        @include grid(7, 5, 1em);
 
         grid-template-areas:
-        'cabecera cabecera cabecera cabecera'
-        'titulo titulo titulo titulo'
-        'inicioproductos inicioproductos inicioproductos inicioproductos'
-        'miraproductosinicio miraproductosinicio miraproductosinicio miraproductosinicio'
-        'nosotros nosotros nosotros nosotros'
-        'ubicacion ubicacion local contacto'
-        'pie pie pie pie';
+        'cabecera cabecera cabecera cabecera cabecera'
+        'titulo titulo titulo titulo titulo'
+        'inicioproductos inicioproductos inicioproductos inicioproductos inicioproductos'
+        'miraproductosinicio miraproductosinicio miraproductosinicio miraproductosinicio miraproductosinicio'
+        'nosotros nosotros nosotros nosotros nosotros'
+        'ubicacion ubicacion local contacto contacto'
+        'pie pie pie pie pie';
     }
     .grilla-testimonios{
         @include grid(6, 4, 1em);
