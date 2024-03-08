@@ -31,7 +31,7 @@ em, strong{
 
 /* Pseudoclase */
 .enlace:hover{
-    font-size: 18px;
+    // font-size: 18px;
     font-weight: bold;
 }
 
@@ -42,6 +42,12 @@ em, strong{
     border-radius: 10px;
     color: nth($Colores,2);
     background: $bg-color-menunav; 
+}
+
+p{
+    text-transform: uppercase;
+    font-size: 18px;
+    color: nth($Colores,1);
 }
 
 /* Pseudoelemento */
@@ -179,7 +185,7 @@ body{
     //     background-color: map-get($colores-sitio , body-tablet );
     // }
     .grilla{
-        @include grid(7, 4, 1em);
+        @include grid(8, 4, 1em);
 
         grid-template-areas:
         'cabecera cabecera cabecera cabecera'
@@ -187,7 +193,8 @@ body{
         'inicioproductos inicioproductos inicioproductos inicioproductos'
         'miraproductosinicio miraproductosinicio miraproductosinicio miraproductosinicio'
         'nosotros nosotros nosotros nosotros'
-        'ubicacion ubicacion local contacto'
+        'ubicacion ubicacion ubicacion ubicacion'
+        'local local contacto contacto'
         'pie pie pie pie';
     }
     .grilla-testimonios{
@@ -212,13 +219,14 @@ body{
         'pie pie pie pie';
     }
     .grilla-nosotros{
-        @include grid(5, 4, 1em);
+        @include grid(6, 4, 1em);
 
         grid-template-areas:
         'cabecera cabecera cabecera cabecera'
         'titulo titulo titulo titulo'
         'nosotros nosotros nosotros nosotros'
-        'ubicacion ubicacion local contacto'
+        'ubicacion ubicacion ubicacion ubicacion'
+        'local local contacto contacto'
         'pie pie pie pie';
     }
     .grilla-contactos{
