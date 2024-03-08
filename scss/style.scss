@@ -71,6 +71,10 @@ h2 {
     vertical-align: middle;
 }
 
+.icono:hover{
+    transform: scale(1.1);
+}
+
 .titulo {
     grid-area: titulo;
 }
