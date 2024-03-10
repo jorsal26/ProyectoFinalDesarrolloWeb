@@ -82,9 +82,13 @@ h2 {
 .cabecera {
     grid-area: cabecera;
     background-image: url(../multimedia/FondoLogoSup.svg);
-    position: relative;
+    // position: relative;
     height: 100;
     width: 100%;
+    grid-column: 1/6;
+    @media only screen and (max-width: 981px) {
+        grid-column: 1/4;
+    }
     border-radius: 10px;
     box-shadow: 30px 30px 30px rgba(0,0,0, 0.75);
 
